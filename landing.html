@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRAE</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/PROJEKPARWIS/assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+          font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+}
+
+/* Carousel Section */
+.carousel-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+/* Carousel container */
+.carousel-section .carousel {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 678/700  /* jaga rasio gambar */
+}
+
+/* Carousel gambar */
+.carousel-section .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* tampilkan seluruh gambar */
+    border-radius: 0 20px 20px 0;
+    background-color: #000; /* optional fill */
+    transition: transform 1s ease-in-out;
+}
+
+/* Teks di samping */
+.carousel-section .carousel-text {
+    flex: 1 1 300px;
+    padding: 40px;
+}
+
+.carousel-section .carousel-text h2 {
+    color: #44B630;
+    font-weight: 700;
+}
+
+.carousel-section .carousel-text h1 {
+    font-family: 'Berkshire Swash', sans-serif;
+    color: #44B630;
+    font-size: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-section .carousel,
+    .carousel-section .carousel-text {
+        width: 100%;
+    }
+    .carousel-section .carousel-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .carousel-section .carousel-text h1 {
+        font-size: 50px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/PROJEKPARWIS/landing.html">
+      <img src="/PROJEKPARWIS/assets/images/logo mirae.png" alt="Logo" width="80">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#nature">Nature</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/culture/index.html">Culture</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#biography">Biography</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/globalvalues/index.html">Global Values</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/about/index.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="carousel-section">
+  <div id="carouselBackForth" class="carousel slide" data-bs-ride="false" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/PROJEKPARWIS/assets/images/carousel1.jpg" class="d-block carousel-img" alt="carousel1">
+      </div>
+      <div class="carousel-item">
+        <img src="/PROJEKPARWIS/assets/images/carousel2.jpg" class="d-block carousel-img" alt="carousel2">
+      </div>
+      <div class="carousel-item">
+        <img src="/PROJEKPARWIS/assets/images/carousel3.jpg" class="d-block carousel-img" alt="carousel3">
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-text ms-4">
+    <h2>WELCOME TO,</h2>
+    <h1>MIRAE</h1>
+    <p>Your gateway to discovering the United Arab Emirates. Mirae brings you closer to the beauty, culture, landmarks, and modern life of the UAE in one simple app.</p>
+    <a  href="/PROJEKPARWIS/home/index.html" class="carousel-btn">Explore Now</a>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const carouselEl = document.getElementById('carouselBackForth');
+    const carousel = new bootstrap.Carousel(carouselEl, { ride: false, wrap: false });
+
+    const items = carouselEl.querySelectorAll('.carousel-item');
+    let activeIndex = 0;
+    let direction = 1; // 1 = maju, -1 = mundur
+    const intervalTime = 3000; // 3 detik
+
+    setInterval(() => {
+        // Update index sesuai arah
+        activeIndex += direction;
+
+        // Jika sampai akhir, balik arah
+        if (activeIndex >= items.length) {
+            direction = -1;
+            activeIndex = items.length - 2;
+        }
+
+        // Jika sampai awal, balik arah
+        if (activeIndex < 0) {
+            direction = 1;
+            activeIndex = 1;
+        }
+
+        // Pindah ke slide
+        carousel.to(activeIndex);
+    }, intervalTime);
+});
+</script>
+
+</body>
+</html>

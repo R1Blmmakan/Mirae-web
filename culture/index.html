@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MIRAE - CULTURE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+
+    .culture {
+      position: relative;
+      height: 520px;
+    }
+
+    .hero-bg {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 90px;
+      font-weight: 700;
+      letter-spacing: 5px;
+    }
+
+    /* navbar */
+
+    .navbar-bg {
+      position: fixed;
+      width: 60%;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(217, 217, 217, 0.25);
+      backdrop-filter: blur(5px);
+      z-index: 5;
+    }
+
+    /* FOOD TITLE */
+
+    .culture-title {
+      position: absolute;
+      bottom: -30px;
+      left: 120px;
+      background: linear-gradient(90deg, #5c2d1f, #8c4c33);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 15px;
+      font-weight: 700;
+    }
+
+    /* FOOD GRID */
+
+    .box-grid {
+      background: #7b3a20;
+      padding: 120px 120px 140px 120px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      position: relative;
+    }
+
+    /* CARD */
+
+    .box {
+      background: #d6b384;
+      padding: 25px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+    }
+
+    .box img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 15px;
+    }
+
+    .box h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .box-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #8b4513;
+      color: white;
+      padding: 10px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .box-btn:hover {
+      background: #6e3510;
+    }
+
+    /* RELIGION */
+
+    .religion {
+      background: #7b3a20;
+      padding-bottom: 120px;
+      position: relative;
+    }
+
+    .religion-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -60px;
+    }
+
+    .religion-item {
+      width: 120px;
+      height: 120px;
+      background: #d6b384;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+    }
+
+    .religion-item img {
+      width: 45px;
+      margin-bottom: 8px;
+    }
+
+    /* ACTIVITIES */
+
+    .culture-activity {
+      padding: 80px 120px;
+      background: white;
+    }
+
+    .activity-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      background: #9c531f;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .activity-row img {
+      width: 50%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .activity-text {
+      color: white;
+      padding: 40px;
+    }
+
+    .activity-text h2 {
+      color: #ffd43b;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* CLOTHING */
+
+    .clothing {
+      padding: 80px 120px;
+      background: #f6f6f6;
+    }
+
+    .clothing-title {
+      text-align: center;
+      margin-bottom: 40px;
+      background: #9c531f;
+      display: inline-block;
+      padding: 8px 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .clothing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .clothing-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .clothing-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .clothing-card h4 {
+      padding: 15px;
+      font-weight: 700;
+    }
+
+    .clothing-text {
+      background: #d6b384;
+      border-radius: 15px;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background: #ddd;
+      padding: 70px 120px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-logo img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      background: #dddddd;
+      padding-top: 120px;
+      padding-bottom: 70px;
+      position: relative;
+    }
+
+    .footer-wave {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="culture">
+
+    <div class="hero-content">
+      <img src="/PROJEKPARWIS/assets/images/culture bg.jpg" class="hero-bg">
+      <div class="hero-text">
+        <h1>CULTURE</h1>
+      </div>
+    </div>
+
+    <!-- NAVBAR (TIDAK DIUBAH) -->
+
+    <nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+          <img src="/PROJEKPARWIS/assets/images/logo mirae.png" width="80">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#nature">Nature</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/PROJEKPARWIS/culture/index.html">Culture</a></li>
+            <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#biography">Biography</a></li>
+            <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/globalvalues/index.html">Global Values</a></li>
+            <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/about/index.html">About</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <h2 class="culture-title">FOOD & DRINK</h2>
+
+  </section>
+
+  <!-- FOOD -->
+
+  <section class="box-grid">
+
+    <div class="box">
+      <img src="/PROJEKPARWIS/assets/images/samboosa.jpg">
+      <h2>SAMBOOSA</h2>
+      <p>A traditional Middle Eastern snack shaped like a triangle similar to a samosa and very popular in Gulf
+        countries.</p>
+      <a class="box-btn">MORE</a>
+    </div>
+
+    <div class="box">
+      <img src="/PROJEKPARWIS/assets/images/machboos.jpg">
+      <h2>CHICKEN MACHBOOS</h2>
+      <p>A traditional chicken and rice dish originating from the Arabian Gulf region.</p>
+      <a class="box-btn">MORE</a>
+    </div>
+
+    <div class="box">
+      <img src="/PROJEKPARWIS/assets/images/laban.jpg">
+      <h2>LABAN</h2>
+      <p>A traditional drink made from fermented milk that is popular in the Middle East.</p>
+      <a class="box-btn">MORE</a>
+    </div>
+
+  </section>
+
+  <!-- RELIGION -->
+
+  <section class="religion">
+
+    <div class="religion-grid">
+
+      <div class="religion-item">
+        <img src="/PROJEKPARWIS/assets/images/islam.png">
+        <p>ISLAM</p>
+      </div>
+
+      <div class="religion-item">
+        <img src="/PROJEKPARWIS/assets/images/christian.png">
+        <p>CHRISTIANY</p>
+      </div>
+
+      <div class="religion-item">
+        <img src="/PROJEKPARWIS/assets/images/buddha.png">
+        <p>BUDDHISM</p>
+      </div>
+
+      <div class="religion-item">
+        <img src="/PROJEKPARWIS/assets/images/hindu.png">
+        <p>HINDUISM</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACTIVITIES -->
+
+  <section class="culture-activity">
+
+    <div class="activity-row">
+      <img src="/PROJEKPARWIS/assets/images/al ayala.png">
+      <div class="activity-text">
+        <h2>AL-AYALA</h2>
+        <p>Al Ayala is a traditional dance performed by two rows of men holding sticks.</p>
+      </div>
+    </div>
+
+    <div class="activity-row reverse">
+      <img src="/PROJEKPARWIS/assets/images/falconry.png">
+      <div class="activity-text">
+        <h2>FALCONRY</h2>
+        <p>Falconry is the traditional practice of hunting with falcons.</p>
+      </div>
+    </div>
+
+    <div class="activity-row">
+      <img src="/PROJEKPARWIS/assets/images/camel racing.png">
+      <div class="activity-text">
+        <h2>CAMEL RICING</h2>
+        <p>Camel racing is a popular traditional sport in the UAE.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CLOTHING -->
+
+  <section class="clothing">
+
+    <center>
+      <h3 class="clothing-title">TRADITIONAL CLOTHING</h3>
+    </center>
+
+    <div class="clothing-grid">
+
+      <div class="clothing-card">
+        <img src="/PROJEKPARWIS/assets/images/kandura.jpg">
+        <h4>KANDURA</h4>
+      </div>
+
+      <div class="clothing-text">
+        <p>Kandura is the traditional long white robe worn by men in the UAE designed for desert climate comfort.</p>
+      </div>
+
+      <div class="clothing-card">
+        <img src="/PROJEKPARWIS/assets/images/abaya.jpg">
+        <h4>ABAYA</h4>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <svg class="footer-wave" viewBox="0 0 1440 120">
+      <path fill="#dddddd"
+        d="M0,64L60,74.7C120,85,240,107,360,106.7C480,107,600,85,720,74.7C840,64,960,64,1080,74.7C1200,85,1320,107,1380,117.3L1440,128V0H1380C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0H0Z">
+      </path>
+    </svg>
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        <img src="/PROJEKPARWIS/assets/images/logo mirae.png">
+        <p>Your gateway to discovering the United Arab Emirates.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h5>NAVIGATION</h5>
+        <ul>
+          <li>Home</li>
+          <li>Nature</li>
+          <li>Culture</li>
+          <li>Biography</li>
+          <li>Global Values</li>
+          <li>About</li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h5>TEAM</h5>
+        <ul>
+          <li>PPLG</li>
+          <li>Hospitality</li>
+          <li>Culinary</li>
+          <li>DKV</li>
+          <li>Accounting</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>+

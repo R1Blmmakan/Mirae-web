@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MIRAE - HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/PROJEKPARWIS/assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* HERO */
+
+        .tourism-hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* DESTINATION IMAGE */
+
+        .tourism-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: opacity .5s ease;
+        }
+
+        .tourism-bg.fade {
+            opacity: 0;
+        }
+
+        /* DESTINATION TITLE */
+
+        .airport-title {
+            position: absolute;
+            right: 10%;
+            top: 32%;
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFC107;
+            text-align: right;
+            max-width: 420px;
+            line-height: 1.1;
+            z-index: 5;
+        }
+
+        /* DESCRIPTION */
+
+        .airport-desc {
+            position: absolute;
+            right: 10%;
+            top: 48%;
+            width: 380px;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(6px);
+            padding: 22px;
+            border-radius: 18px;
+            color: white;
+            font-size: 14px;
+            line-height: 1.6;
+            z-index: 5;
+        }
+
+        /* ROUTE */
+
+        .route-wrapper {
+            position: absolute;
+            left: 90px;
+            top: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 50;
+        }
+
+        .route-line {
+            position: absolute;
+            height: 360px;
+            width: 3px;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: 0;
+        }
+
+        .route-progress {
+            position: absolute;
+            width: 3px;
+            background: white;
+            top: 0;
+            height: 0;
+            transition: height .4s ease;
+        }
+
+        /* ROUTE BUTTON */
+
+        .route-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            margin: 14px 0;
+            font-weight: 600;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.65);
+            color: #333;
+            transition: all .25s ease;
+            z-index: 1;
+        }
+
+        .route-btn:hover {
+            transform: scale(1.15);
+            background: white;
+        }
+
+        .route-btn.active {
+            background: white;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="tourism-hero">
+
+        <img src="/PROJEKPARWIS/assets/images/zayed-airport.png" class="tourism-bg" alt="Background">
+
+        <!-- NAVBAR (punya kamu, tidak diubah) -->
+
+        <nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="/PROJEKPARWIS/assets/images/logo mirae.png" width="80">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#nature">Nature</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/culture/index.html">Culture</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/home/index.html#biography">Biography</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/globalvalues/index.html">Global
+                                Values</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/PROJEKPARWIS/about/index.html">About</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- TITLE -->
+
+        <h1 class="airport-title" id="destinationTitle">
+            Zayed International Airport
+        </h1>
+
+        <!-- DESCRIPTION -->
+
+        <div class="airport-desc" id="airportText">
+            Zayed International Airport is the main gateway to Abu Dhabi and one of the most advanced aviation hubs in
+            the Middle East.
+        </div>
+
+        <!-- ROUTE -->
+
+        <div class="route-wrapper">
+
+            <div class="route-line">
+                <div class="route-progress" id="routeProgress"></div>
+            </div>
+
+            <button class="route-btn active" data-img="/PROJEKPARWIS/assets/images/zayed-airport.png"
+                data-title="Zayed International Airport"
+                data-text="Zayed International Airport is the main gateway to Abu Dhabi and one of the most advanced aviation hubs in the Middle East.">
+                1
+            </button>
+
+            <button class="route-btn" data-img="/PROJEKPARWIS/assets/images/mosque.png"
+                data-title="Sheikh Zayed Grand Mosque"
+                data-text="One of the largest mosques in the world, famous for its breathtaking white marble architecture.">
+                2
+            </button>
+
+            <button class="route-btn" data-img="/PROJEKPARWIS/assets/images/afh.png" data-title="Abrahamic Family House"
+                data-text="A place where people of different faiths can come together to celebrate their shared values and beliefs.">
+                3
+            </button>
+
+            <button class="route-btn" data-img="/PROJEKPARWIS/assets/images/palm-jumeirah.jpg"
+                data-title="Palm Jumeirah"
+                data-text="A world famous artificial island shaped like a palm tree with luxury resorts and beaches.">
+                4
+            </button>
+
+            <button class="route-btn" data-img="/PROJEKPARWIS/assets/images/louvre-abu-dhabi.jpg"
+                data-title="Louvre Abu Dhabi"
+                data-text="A global cultural museum blending art, architecture and heritage beneath its floating dome.">
+                5
+            </button>
+
+            <button class="route-btn" data-img="/PROJEKPARWIS/assets/images/liwa-desert.jpg" data-title="Liwa Desert"
+                data-text="Home to some of the largest sand dunes in the world and authentic desert adventures in the UAE.">
+                6
+            </button>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const buttons = document.querySelectorAll(".route-btn");
+        const bg = document.querySelector(".tourism-bg");
+        const text = document.getElementById("airportText");
+        const title = document.getElementById("destinationTitle");
+        const progress = document.getElementById("routeProgress");
+
+        buttons.forEach((btn, index) => {
+
+            btn.addEventListener("click", () => {
+
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                bg.classList.add("fade");
+
+                setTimeout(() => {
+                    bg.src = btn.dataset.img;
+                    bg.classList.remove("fade");
+                }, 200);
+
+                title.innerText = btn.dataset.title;
+                text.innerText = btn.dataset.text;
+
+                let stepHeight = 72;
+                progress.style.height = (index * stepHeight) + "px";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
