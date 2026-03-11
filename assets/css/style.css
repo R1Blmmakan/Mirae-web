@@ -26,7 +26,7 @@
 /* Hero section */
 .hero {
   position: relative;
-  background-image: url("./images/uae.svg");
+  background-image: url("../images/uae.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("./images/explore_bg.jpeg");
+  background-image: url("../images/explore_bg.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -190,7 +190,7 @@ h2 {
   overflow: hidden;
   z-index: 1;
 
-  background-image: url(./images/nature_bg_image.jpg);
+  background-image: url(../images/nature_bg_image.jpg);
   background-size: 100%;
 }
 
@@ -409,7 +409,7 @@ h2 {
   flex-wrap: wrap;
   position: relative;
   min-height: 100vh;
-  background-image: url(./images/landforms_bg.png);
+  background-image: url(../images/landforms_bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -559,12 +559,10 @@ h2 {
 
   padding-bottom: 144.4%;
 
-  background-image: url('./images/landwater.png');
+  background-image: url('../images/landwater.png');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-
-  margin-top: 50px;
 }
 
 .landwater-title {
@@ -735,7 +733,7 @@ html {
   width: 100%;
   height: 100vh;
   /* Sesuaikan tinggi dengan kebutuhan design */
-  background-image: url('./images/culture_bg.jpg');
+  background-image: url('../images/culture_bg.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
