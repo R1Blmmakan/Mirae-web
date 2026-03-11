@@ -246,3 +246,244 @@ html {
 .map-text {
   /* Add map text styles here */
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* iPhone specific: max-width 390px */
+@media (max-width: 390px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  #bioCarousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 32vh;
+  }
+
+  .bio-image-wrapper {
+    width: 100%;
+  }
+
+  .bio-red-bg {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+
+  .bio-title {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    letter-spacing: 0.3px;
+  }
+
+  .bio-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .bio-card {
+    width: 96%;
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .bio-card h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .bio-quote {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .footer {
+    padding: 30px 2%;
+  }
+
+  .footer-body {
+    gap: 12px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo img {
+    width: 50px;
+  }
+
+  .footer-logo p {
+    font-size: 9px;
+  }
+
+  .footer-nav h5 {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+
+  .footer-nav li {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+}
+
+/* Tablets: 1024px ke bawah */
+  #bioCarousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 55vh;
+  }
+
+  .bio-title {
+    font-size: 1.3rem;
+    padding: 12px 35px;
+  }
+
+  .bio-card {
+    width: 85%;
+    max-width: 550px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bioCarousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 45vh;
+  }
+
+  .bio-title {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+  }
+
+  .bio-red-bg {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+
+  .bio-content {
+    padding-left: 5%;
+  }
+
+  .bio-card {
+    width: 90%;
+    max-width: 480px;
+    padding: 25px;
+  }
+
+  .bio-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .bio-quote {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    padding: 50px 5%;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-section {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  #bioCarousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 35vh;
+  }
+
+  .bio-image-wrapper {
+    width: 100%;
+  }
+
+  .bio-red-bg {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  }
+
+  .bio-title {
+    font-size: 0.95rem;
+    padding: 7px 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .bio-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .bio-card {
+    width: 95%;
+    max-width: 280px;
+    padding: 15px;
+  }
+
+  .bio-card h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .bio-quote {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .footer {
+    padding: 40px 3%;
+  }
+
+  .footer-body {
+    gap: 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .footer-logo img {
+    width: 60px;
+  }
+
+  .footer-logo p {
+    font-size: 11px;
+  }
+
+  .footer-nav h5 {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .footer-nav li {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+}

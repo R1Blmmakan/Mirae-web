@@ -113,3 +113,211 @@
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
   transform: scale(1.1);
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* iPhone specific: max-width 390px */
+@media (max-width: 390px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tourism-hero {
+    height: 65vh;
+  }
+
+  .navbar-bg {
+    width: 95%;
+    max-width: none;
+    top: 5px;
+    padding: 5px 10px;
+  }
+
+  .navbar-brand img {
+    width: 32px;
+  }
+
+  .navbar-bg .nav-link {
+    font-size: 8px;
+    padding: 0.15rem 0.15rem;
+  }
+
+  .airport-title {
+    right: 2%;
+    top: 20%;
+    font-size: 18px;
+    max-width: 190px;
+    line-height: 1;
+  }
+
+  .airport-desc {
+    right: 2%;
+    top: 38%;
+    width: 170px;
+    font-size: 9px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .route-wrapper {
+    left: 10px;
+    top: 22%;
+  }
+
+  .route-line {
+    height: 160px;
+  }
+
+  .route-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 8px;
+    margin: 6px 0;
+  }
+
+  .route-btn:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Tablets: 1024px ke bawah */
+  .airport-title {
+    right: 6%;
+    top: 28%;
+    font-size: 40px;
+    max-width: 350px;
+  }
+
+  .airport-desc {
+    right: 6%;
+    top: 45%;
+    width: 320px;
+    font-size: 13px;
+    padding: 18px;
+  }
+
+  .route-wrapper {
+    left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tourism-hero {
+    height: 80vh;
+  }
+
+  .navbar-bg {
+    width: 90%;
+    max-width: 450px;
+    padding: 8px 15px;
+  }
+
+  .navbar-brand img {
+    width: 50px;
+  }
+
+  .navbar-bg .nav-link {
+    font-size: 12px;
+  }
+
+  .airport-title {
+    right: 4%;
+    top: 25%;
+    font-size: 32px;
+    max-width: 300px;
+  }
+
+  .airport-desc {
+    right: 4%;
+    top: 43%;
+    width: 280px;
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .route-wrapper {
+    left: 30px;
+    top: 28%;
+  }
+
+  .route-line {
+    height: 250px;
+  }
+
+  .route-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 11px;
+    margin: 10px 0;
+  }
+
+  .route-btn:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .tourism-hero {
+    height: 70vh;
+  }
+
+  .navbar-bg {
+    width: 92%;
+    max-width: 280px;
+    top: 8px;
+    padding: 6px 10px;
+  }
+
+  .navbar-brand img {
+    width: 35px;
+  }
+
+  .navbar-bg .nav-link {
+    font-size: 9px;
+    padding: 0.2rem 0.2rem;
+  }
+
+  .airport-title {
+    right: 3%;
+    top: 22%;
+    font-size: 22px;
+    max-width: 220px;
+    line-height: 1.1;
+  }
+
+  .airport-desc {
+    right: 3%;
+    top: 40%;
+    width: 200px;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .route-wrapper {
+    left: 15px;
+    top: 25%;
+  }
+
+  .route-line {
+    height: 180px;
+  }
+
+  .route-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 9px;
+    margin: 7px 0;
+  }
+
+  .route-btn:hover {
+    transform: scale(1.08);
+  }
+}

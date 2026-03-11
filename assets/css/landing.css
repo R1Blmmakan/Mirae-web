@@ -1,78 +1,276 @@
 /* ===== LANDING PAGE STYLES ===== */
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
 }
 
 p {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 /* Carousel Section */
 .carousel-section {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 120px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 120px;
 }
 
 /* Carousel container */
 .carousel-section .carousel {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 678/700;  /* jaga rasio gambar */
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 678/700;
+    /* jaga rasio gambar */
 }
 
 /* Carousel gambar */
 .carousel-section .carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* tampilkan seluruh gambar */
-  border-radius: 0 20px 20px 0;
-  background-color: #000; /* optional fill */
-  transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* tampilkan seluruh gambar */
+    border-radius: 0 20px 20px 0;
+    background-color: #000;
+    /* optional fill */
+    transition: transform 1s ease-in-out;
 }
 
 /* Teks di samping */
 .carousel-section .carousel-text {
-  flex: 1 1 300px;
-  padding: 40px;
+    flex: 1 1 300px;
+    padding: 40px;
 }
 
 .carousel-section .carousel-text h2 {
-  color: #44B630;
-  font-weight: 700;
+    color: #44B630;
+    font-weight: 700;
 }
 
 .carousel-section .carousel-text h1 {
-  font-family: 'Berkshire Swash', sans-serif;
-  color: #44B630;
-  font-size: 50px;
+    font-family: 'Berkshire Swash', sans-serif;
+    color: #44B630;
+    font-size: 50px;
 }
 
 /* Responsive */
+
+/* iPhone specific: max-width 390px */
+@media (max-width: 390px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-bg {
+        width: 95%;
+        max-width: none;
+        top: 5px;
+        padding: 5px 10px;
+    }
+
+    .navbar-brand img {
+        width: 32px;
+    }
+
+    .navbar-bg .nav-link {
+        font-size: 8px;
+        padding: 0.15rem 0.15rem;
+    }
+
+    .carousel-section {
+        gap: 10px;
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+
+    .carousel-section .carousel {
+        max-width: 100%;
+        width: 95vw;
+    }
+
+    .carousel-section .carousel-text {
+        padding: 12px 8px;
+        margin-top: 8px;
+    }
+
+    .carousel-section .carousel-text h2 {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .carousel-section .carousel-text h1 {
+        font-size: 22px;
+        line-height: 1.1;
+        font-family: 'Berkshire Swash', sans-serif;
+    }
+
+    .carousel-section .carousel-text p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .carousel-section .carousel-item img {
+        border-radius: 8px;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 400;
+    }
+}
+
+/* Tablets: 1024px ke bawah */
+.carousel-section {
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.carousel-section .carousel {
+    max-width: 450px;
+}
+
+.carousel-section .carousel-text {
+    padding: 30px;
+}
+
+.carousel-section .carousel-text h1 {
+    font-size: 45px;
+}
+
+
 @media (max-width: 768px) {
-  .carousel-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-section .carousel,
-  .carousel-section .carousel-text {
-    width: 100%;
-  }
-  .carousel-section .carousel-text {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .carousel-section .carousel-text h1 {
-    font-size: 50px;
-  }
+    .carousel-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 70px;
+        padding: 0 15px;
+    }
+
+    .carousel-section .carousel,
+    .carousel-section .carousel-text {
+        width: 100%;
+    }
+
+    .carousel-section .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-section .carousel-text {
+        text-align: center;
+        margin-top: 15px;
+        padding: 25px 15px;
+    }
+
+    .carousel-section .carousel-text h2 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .carousel-section .carousel-text h1 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .carousel-section .carousel-text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .carousel-section .carousel-item img {
+        border-radius: 15px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-section {
+        gap: 12px;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
+    .carousel-section .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-section .carousel-text {
+        padding: 15px 10px;
+        margin-top: 10px;
+    }
+
+    .carousel-section .carousel-text h2 {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .carousel-section .carousel-text h1 {
+        font-size: 24px;
+        line-height: 1.15;
+        font-family: 'Berkshire Swash', sans-serif;
+    }
+
+    .carousel-section .carousel-text p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .carousel-section .carousel-item img {
+        border-radius: 10px;
+    }
+
+    body {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 400;
+    }
 }
