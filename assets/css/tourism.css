@@ -134,14 +134,10 @@
   }
 
   .navbar-bg {
-    width: 95%;
-    max-width: none;
+    width: 90%;
+    max-width: 280px;
     top: 5px;
-    padding: 5px 10px;
-  }
-
-  .navbar-brand img {
-    width: 32px;
+    padding: 2px 8px;
   }
 
   .navbar-bg .nav-link {
@@ -206,7 +202,6 @@
   .route-wrapper {
     left: 50px;
   }
-}
 
 @media (max-width: 768px) {
   .tourism-hero {
@@ -214,17 +209,14 @@
   }
 
   .navbar-bg {
-    width: 90%;
-    max-width: 450px;
-    padding: 8px 15px;
-  }
-
-  .navbar-brand img {
-    width: 50px;
+    width: 80%;
+    max-width: 380px;
+    padding: 3px 10px;
   }
 
   .navbar-bg .nav-link {
     font-size: 12px;
+    padding: 0.25rem 0.4rem;
   }
 
   .airport-title {

@@ -83,14 +83,10 @@ p {
     }
 
     .navbar-bg {
-        width: 95%;
-        max-width: none;
+        width: 90%;
+        max-width: 280px;
         top: 5px;
-        padding: 5px 10px;
-    }
-
-    .navbar-brand img {
-        width: 32px;
+        padding: 2px 8px;
     }
 
     .navbar-bg .nav-link {

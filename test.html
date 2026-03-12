@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navbar kapsul */
+        .navbar-bg {
+            position: fixed;
+            width: 60%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background-color: rgba(217, 217, 217, 0.25);
+            backdrop-filter: blur(5px);
+        }
+
+        /* style navbar */
+        .navbar-bg .nav-link {
+            font-family: Poppins, sans-serif;
+            color: black;
+            font-weight: 400;
+        }
+
+        .navbar-bg .nav-link.active {
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+        }
+
+        /* Hero section */
+        .hero {
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .hero .hero-title {
+            position: absolute;
+            max-width: 90%;
+            width: 90vw;
+            max-width: 700px;
+            height: 54px;
+            bottom: -27px;
+            left: 50%;
+            border-radius: 17px;
+            transform: translateX(-50%);
+            z-index: 1;
+
+            font-family: Poppins, sans-serif;
+            text-align: center;
+            line-height: 55px;
+            font-size: 150%;
+            font-weight: 700;
+            color: black;
+            background-color: #F1E194;
+        }
+
+        .hero {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero text-center">
+        <h1 href="" class="hero-title">WORLD NAVIGATION</h1>
+        <!-- Navbar kapsul -->
+        <nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./landing.html">
+                    <img src="./assets/images/logo_mirae.png" alt="Logo" width="80">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nature">Nature</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./culture/index.html">Culture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#biography">Biography</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./globalvalues/index.html">Global Values</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about/index.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+</body>
+
+</html>

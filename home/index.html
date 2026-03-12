@@ -20,7 +20,7 @@
     <!-- Navbar kapsul -->
     <nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../../landing.html">
+        <a class="navbar-brand" href="../../index.html">
           <img src="../../assets/images/logo_mirae.png" alt="Logo" width="80">
         </a>
 
@@ -34,7 +34,7 @@
             <li class="nav-item"><a class="nav-link" href="#nature">Nature</a></li>
             <li class="nav-item"><a class="nav-link" href="../../culture/index.html">Culture</a></li>
             <li class="nav-item"><a class="nav-link" href="#biography">Biography</a></li>
-            <li class="nav-item"><a class="nav-link" href="../../globalvalues/index.html">Global Values</a></li>
+            <li class="nav-item"><a class="nav-link" href="#main-bg">Global Values</a></li>
             <li class="nav-item"><a class="nav-link" href="../../about/index.html">About</a></li>
           </ul>
         </div>
@@ -188,7 +188,6 @@
         <p>Wadi Wurayah is a protected natural valley located in Fujairah, United Arab Emirates. </p>
       </div>
     </a>
-    </div>
   </section>
 
   <section class="landwater-section">
@@ -284,61 +283,94 @@
                 cultural landscape of the UAE through her creative projects and initiatives.</p>
             </div>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <div class="bio-image-wrapper">
-              <img src="../../assets/images/majid.png" alt="Majid Al-Futtaim">
-            </div>
-            <div class="bio-red-bg"></div>
-            <div class="bio-title">BIOGRAPHY</div>
-            <div class="bio-content">
-              <div class="bio-card">
-                <h2>Majid Al-Futtaim</h2>
-                <h3>Accounting</h3>
-                <p>The Pioneer of Modern Lifestyle Until his passing in 2021, Majid Al Futtaim was perhaps the most
-                  private yet influential figure in the region. He didn't just build malls, he invented the concept of
-                  "retail-tainment" in the Middle East. Unlike Alabbar, Al Futtaim stayed out of the spotlight, but his
-                  presence is felt in every cinema (VOX), every supermarket, and every luxury mall across the continent.
-                </p>
-              </div>
+        <div class="carousel-item">
+          <div class="bio-image-wrapper">
+            <img src="../../assets/images/majid.png" alt="Majid Al-Futtaim">
+          </div>
+          <div class="bio-red-bg"></div>
+          <div class="bio-title">BIOGRAPHY</div>
+          <div class="bio-content">
+            <div class="bio-card">
+              <h2>Majid Al-Futtaim</h2>
+              <h3>Accounting</h3>
+              <p>The Pioneer of Modern Lifestyle Until his passing in 2021, Majid Al Futtaim was perhaps the most
+                private yet influential figure in the region. He didn't just build malls, he invented the concept of
+                "retail-tainment" in the Middle East. Unlike Alabbar, Al Futtaim stayed out of the spotlight, but his
+                presence is felt in every cinema (VOX), every supermarket, and every luxury mall across the continent.
+              </p>
             </div>
           </div>
         </div>
-
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#bioCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bioCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
       </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#bioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#bioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </section>
 
   <!-- GLOBAL VALUES -->
 
-  <section class="global-home">
+  <section class="global-values" id="main-bg">
+    <div class="gv-container">
+      <h1 class="gv-title">GLOBAL VALUES</h1>
 
-    <div class="global-content">
+      <div class="gv-content">
+        <div class="gv-text-section">
+          <h2 class="gv-value-title" id="display-title">Government</h2>
+          <div class="gv-value-item">
+            <p class="gv-value-description" id="display-text">
+              The United Arab Emirates has a federal monarchy system consisting of seven emirates. It is led by a President and a Prime Minister. The current President is Mohamed bin Zayed Al Nahyan. Each emirate has its own ruler but works together under the federal government.
+            </p>
+          </div>
+        </div>
 
-      <div class="global-text">
-        <h2>GLOBAL VALUES</h2>
-        <h4>Government</h4>
+        <div class="gv-images-section">
+          <div class="gv-image-card" onclick="gantiKonten('Government', 'The United Arab Emirates has a federal monarchy system consisting of seven emirates. It is led by a President and a Prime Minister. The current President is Mohamed bin Zayed Al Nahyan. Each emirate has its own ruler but works together under the federal government.', 'caption 1.png')">
+            <img src="../../assets/images/caption_1.png" alt="Government">
+          </div>
 
-        <p>
-          The United Arab Emirates has a federal monarchy system consisting
-          of seven emirates. It is led by a President and a Prime Minister.
-          The current President is Mohammed bin Zayed Al Nahyan while the
-          Prime Minister is Mohammed bin Rashid Al Maktoum.
-        </p>
+          <div class="gv-image-card" onclick="gantiKonten('Currency', 'The official currency of the UAE is the United Arab Emirates Dirham (AED).1 Dirham = 100 fils Currency symbol: AED or د.إ Used throughout all emirates in the UAE', 'UAE-Dirham-Notes-1024x640 1.png')">
+            <img src="../../assets/images/UAE-Dirham-Notes-1024x640_1.png" alt="UAE Currency">
+          </div>
+
+          <div class="gv-image-card" onclick="gantiKonten('Official Documents', 'The UAE uses advanced systems for its official documents, integrating digital security and traditional Arabic calligraphy.', '053163500_1556342230-iStock-104499123 1.png')">
+            <img src="../../assets/images/053163500_1556342230-iStock-104499123_1.png" alt="Official Document">
+          </div>
+
+          <div class="gv-image-card" onclick="gantiKonten('Economy', 'The UAE economy is one of the most diversified in the world, with strong sectors in trade, tourism, and technology.', 'Picture---2024-08-01T101210.807.jpg')">
+            <img src="../../assets/images/Picture---2024-08-01T101210.807.jpg" alt="Economy">
+          </div>
+
+          <div class="gv-image-card" onclick="gantiKonten('Architecture', 'The Sheikh Zayed Mosque is a masterpiece of modern Islamic architecture and a symbol of peace and tolerance.', 'Sheikh_Zayed_Mosque_view.jpg 2.png')">
+            <img src="../../assets/images/Sheikh_Zayed_Mosque_view.jpg_2.png" alt="Architecture">
+          </div>
+
+          <div class="gv-image-card" onclick="gantiKonten('Leadership', 'The leadership of the UAE focuses on innovation and the happiness of its citizens through various strategic initiatives.', 'HHShkMohd-visit-Dubai-South-1024x682.jpg')">
+            <img src="../../assets/images/HHShkMohd-visit-Dubai-South-1024x682.jpg" alt="Leadership">
+          </div>
+        </div>
       </div>
-
-      <div class="global-gallery">
-
-      </div>
-
     </div>
 
+    <script>
+      function gantiKonten(judul, deskripsi, urlGambar) {
+        const judulElemen = document.getElementById('display-title');
+        const deskripsiElemen = document.getElementById('display-text');
+        const bgElemen = document.getElementById('main-bg');
+
+        judulElemen.innerText = judul;
+        deskripsiElemen.innerText = deskripsi;
+        bgElemen.style.backgroundImage = "url('../../assets/images/" + urlGambar + "')";
+
+        console.log("Konten & Background berubah ke: " + judul);
+      }
+    </script>
   </section>
 
 

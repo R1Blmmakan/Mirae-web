@@ -1,506 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>MIRAE - HOME</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRAE</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/landing.css">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero section -->
-  <section class="hero text-center">
-    <h1 href="" class="hero-title">WORLD NAVIGATION</h1>
-    <!-- Navbar kapsul -->
-    <nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./landing.html">
-          <img src="./assets/images/logo_mirae.png" alt="Logo" width="80">
-        </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#nature">Nature</a></li>
-            <li class="nav-item"><a class="nav-link" href="./culture/index.html">Culture</a></li>
-            <li class="nav-item"><a class="nav-link" href="#biography">Biography</a></li>
-            <li class="nav-item"><a class="nav-link" href="./globalvalues/index.html">Global Values</a></li>
-            <li class="nav-item"><a class="nav-link" href="./about/index.html">About</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </section>
-
-  <section class="map-section">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722691.7050573626!2d51.3065268479622!3d24.331122134869034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUni%20Emirat%20Arab!5e0!3m2!1sid!2sid!4v1770910460353!5m2!1sid!2sid"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <div class="map-text">
-      <h2>WELCOME TO,</h2>
-      <h1>MIRAE</h1>
-      <p>Your gateway to discovering the United Arab Emirates. Mirae brings you closer to the beauty, culture,
-        landmarks, and modern life of the UAE in one simple app.</p>
-      <a href="">DOWNLOAD MOBILE APPS</a>
-    </div>
-  </section>
-
-  <section class="explore-section">
-    <div class="explore-content">
-      <h1>
-        DO YOU WANT TO EXPLORE <br>
-        TOURISM IN UAE?
-      </h1>
-    </div>
-
-    <a class="explore-btn" href="./tourism/index.html">EXPLORE NOW</a>
-  </section>
-
-  <section class="nature-btn" id="nature">
-    <a href="" class="btn btn-primary hero-btn">
-      <video autoplay muted loop playsinline class="nature-video">
-        <source src="./assets/images/nature_bg_video.mp4" type="video/mp4">
-      </video>
-      <div class="nature-text-content">
-        <h1>NATURE</h1>
-        <h2>United Arab Emirates</h2>
-      </div>
+<nav class="navbar navbar-expand-lg rounded-pill shadow px-4 py-2 navbar-bg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./landing.html">
+      <img src="./assets/images/logo_mirae.png" alt="Logo" width="80">
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="./home/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./home/index.html#nature">Nature</a></li>
+        <li class="nav-item"><a class="nav-link" href="./culture/index.html">Culture</a></li>
+        <li class="nav-item"><a class="nav-link" href="./home/index.html#biography">Biography</a></li>
+        <li class="nav-item"><a class="nav-link" href="./home/index.html#main-bg">Global Values</a></li>
+        <li class="nav-item"><a class="nav-link" href="./about/index.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <h1 class="hero-title">UAE FACTS</h1>
-
-    <div class="card-info-container">
-      <div class="card-info">
-        <div class="icon1">
-          <img src="./assets/images/geography_icon.svg">
-        </div>
-        <h2>Total Area</h2>
-        <div class="line"></div>
-        <p>
-          The United Arab Emirates covers an area of about 83,600 km² and consists of seven emirates, Abu Dhabi as the
-          capital and the largest emirate at approximately 67,340km²
-        </p>
+<section class="carousel-section">
+  <div id="carouselBackForth" class="carousel slide" data-bs-ride="false" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/images/carousel1.jpg" class="d-block carousel-img" alt="carousel1">
       </div>
-
-      <div class="card-info">
-        <div class="icon">
-          <img src="./assets/images/navigation_icon.svg">
-        </div>
-        <h2>Geography</h2>
-        <div class="line"></div>
-        <p>
-          The UAE is located in the Middle East or West Asia, between Oman and Saudi Arabia, and borders both the
-          Persian Gulf and the Gulf of Oman.
-        </p>
+      <div class="carousel-item">
+        <img src="./assets/images/carousel2.jpg" class="d-block carousel-img" alt="carousel2">
       </div>
-
-      <div class="card-info">
-        <div class="icon">
-          <img src="./assets/images/navigation_icon.svg">
-        </div>
-        <h2>Astronomy</h2>
-        <div class="line"></div>
-        <p>
-          It lies between 22°50′–26° North latitude and 51°–56°25′ East longitude. Its landscapes include deserts, the
-          Hajar Mountains, coastal areas, and mangroves.
-        </p>
+      <div class="carousel-item">
+        <img src="./assets/images/carousel3.jpg" class="d-block carousel-img" alt="carousel3">
       </div>
     </div>
-    </div>
+  </div>
 
-  </section>
+  <div class="carousel-text ms-4">
+    <h2>WELCOME TO,</h2>
+    <h1>MIRAE</h1>
+    <p>Your gateway to discovering the United Arab Emirates. Mirae brings you closer to the beauty, culture, landmarks, and modern life of the UAE in one simple app.</p>
+    <a  href="./home/index.html" class="carousel-btn">Explore Now</a>
+  </div>
+</section>
 
-  <section class="card-grid">
-    <h1 class="hero-title">LANDFORMS</h1>
-    <a href="#" class="card">
-      <div class="card-inner">
-        <img src="./assets/images/marine_uae.jpeg" alt="Card 1" class="card-img">
-      </div>
-      <div class="card-caption">
-        <h3>Marine</h3>
-      </div>
-      <div class="card-overlay">
-        <h3>Gulf Of Oman</h3>
-        <p>The Gulf of Oman is a small sea that connects the Persian Gulf to the Arabian Sea (Indian Ocean).</p>
-      </div>
-    </a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <a href="#" class="card">
-      <div class="card-inner">
-        <img src="./assets/images/mountains_uae.jpeg" alt="Card 1" class="card-img">
-      </div>
-      <div class="card-caption">
-        <h3>Mountains</h3>
-      </div>
-      <div class="card-overlay">
-        <h3>Jebel Jais</h3>
-        <p>Jebel Jais is the highest mountain in the United Arab Emirates, located in Ras Al Khaimah.</p>
-      </div>
-    </a>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const carouselEl = document.getElementById('carouselBackForth');
+    const carousel = new bootstrap.Carousel(carouselEl, { ride: false, wrap: false });
 
-    <a href="#" class="card">
-      <div class="card-inner">
-        <img src="./assets/images/desert_uae.jpeg" alt="Card 1" class="card-img">
-      </div>
-      <div class="card-caption">
-        <h3>Desert</h3>
-      </div>
-      <div class="card-overlay">
-        <h3>Rub' Al Khali</h3>
-        <p>Rub al Khali is one of the largest sand deserts in the world, also known as the Empty Quarter. </p>
-      </div>
-    </a>
+    const items = carouselEl.querySelectorAll('.carousel-item');
+    let activeIndex = 0;
+    let direction = 1; // 1 = maju, -1 = mundur
+    const intervalTime = 3000; // 3 detik
 
-    <a href="#" class="card">
-      <div class="card-inner">
-        <img src="./assets/images/oasis_uae.jpeg" alt="Card 1" class="card-img">
-      </div>
-      <div class="card-caption">
-        <h3>Oasis</h3>
-      </div>
-      <div class="card-overlay">
-        <h3>Al Ain Oasis</h3>
-        <p>Al Ain Oasis is a large natural oasis located in Al Ain city, Abu Dhabi.</p>
-      </div>
-    </a>
+    setInterval(() => {
+        // Update index sesuai arah
+        activeIndex += direction;
 
-    <a href="#" class="card">
-      <div class="card-inner">
-        <img src="./assets/images/wadi_uae.jpeg" alt="Card 1" class="card-img">
-      </div>
-      <div class="card-caption">
-        <h3>Wadi</h3>
-      </div>
-      <div class="card-overlay">
-        <h3>Wadi Wurayah</h3>
-        <p>Wadi Wurayah is a protected natural valley located in Fujairah, United Arab Emirates. </p>
-      </div>
-    </a>
-    </div>
-  </section>
+        // Jika sampai akhir, balik arah
+        if (activeIndex >= items.length) {
+            direction = -1;
+            activeIndex = items.length - 2;
+        }
 
-  <section class="landwater-section">
-    <div class="landwater-container">
-      <h1 class="landwater-title">CHARACTERISTICS OF LANDWATER AREAS</h1>
-    </div>
-  </section>
-  <!-- CULTURE -->
+        // Jika sampai awal, balik arah
+        if (activeIndex < 0) {
+            direction = 1;
+            activeIndex = 1;
+        }
 
-  <section class="culture-home">
-    <div class="culture-overlay">
-      <div class="culture-content">
-        <a href="./culture/index.html" class="culture-btn">CLICK</a>
-      </div>
-    </div>
-  </section>
+        // Pindah ke slide
+        carousel.to(activeIndex);
+    }, intervalTime);
+});
+</script>
 
-  <section class="biography-section" id="biography">
-    <div id="bioCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#bioCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#bioCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#bioCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#bioCarousel" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#bioCarousel" data-bs-slide-to="4"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="bio-image-wrapper">
-            <img src="./assets/images/sarah.png" alt="Sarah Al-Amiri">
-          </div>
-          <div class="bio-red-bg"></div>
-          <div class="bio-title">BIOGRAPHY</div>
-          <div class="bio-content">
-            <div class="bio-card">
-              <h2>Sarah Al-Amiri</h2>
-              <h3>Technology</h3>
-              <p>Sarah bint Yousef Al Amiri is a scientist and technology leader from the United Arab Emirates who is
-                known as the lead scientist of the Emirates Mars Mission (Hope Probe), which successfully reached Mars
-                orbit in 2020. With a background in computer engineering, she has made major contributions to the
-                development of space technology and has promoted STEM education and innovation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="bio-image-wrapper">
-            <img src="./assets/images/habtoor.png" alt="Khalaf Ahmad Al-Habtoor">
-          </div>
-          <div class="bio-red-bg"></div>
-          <div class="bio-title">BIOGRAPHY</div>
-          <div class="bio-content">
-            <div class="bio-card">
-              <h2>Mohammed bin Rashid</h2>
-              <h3>Hospitality</h3>
-              <p>Sheikh Mohammed bin Rashid Al Maktoum is the Vice President and Prime Minister of the United Arab
-                Emirates and the ruler of Dubai. He is known for transforming Dubai into a global city and economic hub.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="bio-image-wrapper">
-            <img src="./assets/images/atiq.png" alt="Khulood Atiq">
-          </div>
-          <div class="bio-red-bg"></div>
-          <div class="bio-title">BIOGRAPHY</div>
-          <div class="bio-content">
-            <div class="bio-card">
-              <h2>Khulood Atiq</h2>
-              <h3>Culinary</h3>
-              <p>Khulood Atiq is a prominent figure in the United Arab Emirates, known for her contributions to various
-                fields and her active involvement in initiatives related to culture, sports, and humanitarian efforts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="bio-image-wrapper">
-            <img src="./assets/images/ashwaq.png" alt="Ashwaq Abdulla">
-          </div>
-          <div class="bio-red-bg"></div>
-          <div class="bio-title">BIOGRAPHY</div>
-          <div class="bio-content">
-            <div class="bio-card">
-              <h2>Ashwaq Abdulla</h2>
-              <h3>Visual Artist</h3>
-              <p>Ashwaq Abdulla is a talented designer and artist from the United Arab Emirates, known for her
-                innovative work in the field of design and visual arts. She has contributed significantly to the
-                cultural landscape of the UAE through her creative projects and initiatives.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="bio-image-wrapper">
-              <img src="./assets/images/majid.png" alt="Majid Al-Futtaim">
-            </div>
-            <div class="bio-red-bg"></div>
-            <div class="bio-title">BIOGRAPHY</div>
-            <div class="bio-content">
-              <div class="bio-card">
-                <h2>Majid Al-Futtaim</h2>
-                <h3>Accounting</h3>
-                <p>The Pioneer of Modern Lifestyle Until his passing in 2021, Majid Al Futtaim was perhaps the most
-                  private yet influential figure in the region. He didn't just build malls, he invented the concept of
-                  "retail-tainment" in the Middle East. Unlike Alabbar, Al Futtaim stayed out of the spotlight, but his
-                  presence is felt in every cinema (VOX), every supermarket, and every luxury mall across the continent.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#bioCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bioCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-  </section>
-
-  <!-- GLOBAL VALUES -->
-
-  <section class="global-home">
-
-    <div class="global-content">
-
-      <div class="global-text">
-        <h2>GLOBAL VALUES</h2>
-        <h4>Government</h4>
-
-        <p>
-          The United Arab Emirates has a federal monarchy system consisting
-          of seven emirates. It is led by a President and a Prime Minister.
-          The current President is Mohammed bin Zayed Al Nahyan while the
-          Prime Minister is Mohammed bin Rashid Al Maktoum.
-        </p>
-      </div>
-
-      <div class="global-gallery">
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FLIPBOOK -->
-
-  <section class="flipbook-section">
-
-    <h2 class="flipbook-title">MIRAE DIGITAL BOOK</h2>
-
-    <div class="flipbook-container">
-
-      <!-- TEMPAT TARUH FLIPBOOK -->
-      <div class="flipbook-placeholder">
-        <p>Flipbook will appear here</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer class="footer container-fluid">
-    <div class="footer-container d-flex justify-content-between flex-wrap">
-
-      <!-- LEFT -->
-      <div class="footer-left">
-        <img src="./assets/images/logo_mirae.png" class="logo">
-
-        <p>
-          Your gateway to discovering the United Arab Emirates.
-          Mira brings you closer to the beauty, culture, landmarks,
-          and modern life of the UAE in one simple platform.
-        </p>
-
-        <small>©2026 Mirae Inc. All rights reserved</small>
-      </div>
-
-
-      <!-- NAVIGATION -->
-      <div class="footer-nav">
-        <h6>NAVIGATION</h6>
-
-        <ul>
-          <li>Home</li>
-          <li>Nature</li>
-          <li>Culture</li>
-          <li>Biography</li>
-          <li>Global Values</li>
-          <li>About</li>
-        </ul>
-      </div>
-
-
-      <!-- TEAM -->
-      <div class="footer-team">
-        <h6>TEAM</h6>
-
-        <div class="dropdown-box">
-          <div class="dropdown-btn">
-            PPLG
-            <span>⌄</span>
-          </div>
-          <div class="dropdown-content">
-            <p>
-              R. Wan Fikri Cahyadi <br>
-              Ghani Bahrut Tamam <br>
-              Darren Raisya Iqbal <br>
-              Leon Manuel Nadeak <br>
-              Rizki Josuwa Hutabarat <br>
-              Fransisco Valentino <br>
-              Patur Marcelio Limbong <br>
-            </p>
-          </div>
-        </div>
-
-        <div class="dropdown-box">
-          <div class="dropdown-btn">
-            Hospitality
-            <span>⌄</span>
-          </div>
-          <div class="dropdown-content">
-            <p>
-              Syafiq Istahal Rakani <br>
-              Daren Leonel Vidi Putra <br>
-              Darren Raisya Iqbal <br>
-              Tasha Qeyzhia Pahlevi <br>
-              Shafwan Fikti Arya Andhanni <br>
-              Naomi Sachiko <br>
-            </p>
-          </div>
-        </div>
-
-        <div class="dropdown-box">
-          <div class="dropdown-btn">
-            Culinary
-            <span>⌄</span>
-          </div>
-          <div class="dropdown-content">
-            <p>
-              Calya Callysta Sakhi <br>
-              Andika Nirvana <br>
-              Anelca Indriyani Fanka <br>
-              Rizqi Abdulah Rahakbau <br>
-              Kirana Azzifa Neirama <br>
-              Livya Nathania Deborah <br>
-              Afiya Khansa <br>
-              Brian Natamaro Batubara <br>
-            </p>
-          </div>
-        </div>
-
-        <div class="dropdown-box">
-          <div class="dropdown-btn">
-            DKV
-            <span>⌄</span>
-          </div>
-          <div class="dropdown-content">
-            <p>
-              Syifa Naomi Sutisna <br>
-              Kanyasista Dharmmestika Fawwaz Yudianto <br>
-              Farah Fakhira <br>
-              Tsabita Azahwa <br>
-              Kaysan Faris <br>
-              Radix Adelio <br>
-            </p>
-          </div>
-        </div>
-
-        <div class="dropdown-box">
-          <div class="dropdown-btn">
-            Accounting
-            <span>⌄</span>
-          </div>
-          <div class="dropdown-content">
-            <p>
-              Jen Nie Leviani <br>
-              Rahma Khoerunnisa <br>
-              Ainun Nissa <br>
-              Zharifah Lexandrya Alwynoputri <br>
-              Avisha Heni Zerlyana <br>
-            </p>
-          </div>
-        </div>
-
-        <button class="about-btn">
-          About Team
-        </button>
-
-      </div>
-
-
-      <!-- SCHOOL -->
-      <div class="footer-school text-center">
-        <p>Metland School</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
