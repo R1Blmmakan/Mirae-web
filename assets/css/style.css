@@ -467,7 +467,7 @@ iframe {
 
 .card-grid {
   display: flex;
-  gap: 40px 145px;
+  gap: 40px 180px;
   justify-content: center;
   padding: 40px 5%;
   flex-wrap: wrap;

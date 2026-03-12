@@ -1,315 +1,225 @@
-/* ===== TOURISM PAGE STYLES ===== */
+        /* HERO */
 
-/* HERO */
+        .tourism-hero {
+            position: relative;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
 
-.tourism-hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-}
+        /* DESTINATION IMAGE */
 
-/* DESTINATION IMAGE */
+        .tourism-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+              position: relative;
+              min-height: unset;
+              height: auto;
+              overflow: hidden;
+              font-family: 'Poppins', sans-serif;
+              margin-bottom: 0;
+              padding-bottom: 0;
+        }
 
-.tourism-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  transition: opacity .5s ease;
-}
+        /* DESTINATION TITLE */
 
-.tourism-bg.fade {
-  opacity: 0;
-}
+        .airport-title {
+            position: absolute;
+            right: 10%;
+            top: 32%;
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFC107;
+            text-align: right;
+            max-width: 500px;
+            line-height: 1.1;
+            z-index: 5;
+        }
 
-/* DESTINATION TITLE */
+        /* DESCRIPTION */
 
-.airport-title {
-  position: absolute;
-  right: 10%;
-  top: 32%;
-  font-size: 48px;
-  font-weight: 700;
-  color: #FFC107;
-  text-align: right;
-  max-width: 420px;
-  line-height: 1.1;
-  z-index: 5;
-}
+        .airport-desc {
+            position: absolute;
+            right: 10%;
+            top: 48%;
+            width: 398px;
+            height: 220px;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(6px);
+            padding: 22px;
+            border-radius: 18px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+            z-index: 5;
+            margin-top: 21px;
+        }
 
-/* DESCRIPTION */
+        /* ROUTE */
 
-.airport-desc {
-  position: absolute;
-  right: 10%;
-  top: 48%;
-  width: 380px;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-  padding: 22px;
-  border-radius: 18px;
-  color: white;
-  font-size: 14px;
-  line-height: 1.6;
-  z-index: 5;
-}
+        .route-wrapper {
+            position: absolute;
+            left: 90px;
+            top: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 50;
+        }
 
-/* ROUTE */
+        .route-line {
+            position: absolute;
+            height: 360px;
+            width: 3px;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: 0;
+        }
 
-.route-wrapper {
-  position: absolute;
-  left: 90px;
-  top: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 50;
-}
+        .route-progress {
+            position: absolute;
+            width: 3px;
+            background: white;
+            top: 0;
+            height: 0;
+            transition: height .4s ease;
+        }
 
-.route-line {
-  position: absolute;
-  height: 360px;
-  width: 3px;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 0;
-}
+        /* ROUTE BUTTON */
 
-.route-progress {
-  position: absolute;
-  width: 3px;
-  background: white;
-  top: 0;
-  height: 0;
-  transition: height .4s ease;
-}
+        .route-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            margin: 14px 0;
+            font-weight: 600;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.65);
+            color: #333;
+            transition: all .25s ease;
+            z-index: 1;
+        }
 
-/* ROUTE BUTTON */
+        .route-btn:hover {
+            transform: scale(1.15);
+            background: white;
+        }
 
-.route-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  margin: 14px 0;
-  font-weight: 600;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.65);
-  color: #333;
-  transition: all .25s ease;
-  z-index: 1;
-}
+        .route-btn.active {
+            background: white;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
 
-.route-btn:hover {
-  transform: scale(1.15);
-  background: white;
-}
-
-.route-btn.active {
-  background: white;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-  transform: scale(1.1);
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-
-/* iPhone specific: max-width 390px */
-@media (max-width: 390px) {
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  .tourism-hero {
-    height: 65vh;
-  }
-
-  .navbar-bg {
+    .popular-container {
+    position: relative; /* Ubah dari absolute ke relative */
+    padding: 80px 0;    /* Beri jarak atas dan bawah */
+    margin-top: 100vh;  /* Paksa dia mulai setelah layar pertama selesai */
     width: 90%;
-    max-width: 280px;
-    top: 5px;
-    padding: 2px 8px;
-  }
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    text-align: center;
+    }
 
-  .navbar-bg .nav-link {
-    font-size: 8px;
-    padding: 0.15rem 0.15rem;
-  }
-
-  .airport-title {
-    right: 2%;
-    top: 20%;
-    font-size: 18px;
-    max-width: 190px;
-    line-height: 1;
-  }
-
-  .airport-desc {
-    right: 2%;
-    top: 38%;
-    width: 170px;
-    font-size: 9px;
-    padding: 8px;
-    border-radius: 8px;
-  }
-
-  .route-wrapper {
-    left: 10px;
-    top: 22%;
-  }
-
-  .route-line {
-    height: 160px;
-  }
-
-  .route-btn {
-    width: 26px;
-    height: 26px;
-    font-size: 8px;
-    margin: 6px 0;
-  }
-
-  .route-btn:hover {
-    transform: scale(1.05);
-  }
+.popular-title {
+    color: rgb(3, 3, 3);
+    font-weight: 700;
+    margin-bottom: 50px;
 }
 
-/* Tablets: 1024px ke bawah */
-  .airport-title {
-    right: 6%;
-    top: 28%;
-    font-size: 40px;
-    max-width: 350px;
-  }
-
-  .airport-desc {
-    right: 6%;
-    top: 45%;
-    width: 320px;
-    font-size: 13px;
-    padding: 18px;
-  }
-
-  .route-wrapper {
-    left: 50px;
-  }
-
-@media (max-width: 768px) {
-  .tourism-hero {
-    height: 80vh;
-  }
-
-  .navbar-bg {
-    width: 80%;
-    max-width: 380px;
-    padding: 3px 10px;
-  }
-
-  .navbar-bg .nav-link {
-    font-size: 12px;
-    padding: 0.25rem 0.4rem;
-  }
-
-  .airport-title {
-    right: 4%;
-    top: 25%;
-    font-size: 32px;
-    max-width: 300px;
-  }
-
-  .airport-desc {
-    right: 4%;
-    top: 43%;
-    width: 280px;
-    font-size: 12px;
-    padding: 15px;
-  }
-
-  .route-wrapper {
-    left: 30px;
-    top: 28%;
-  }
-
-  .route-line {
-    height: 250px;
-  }
-
-  .route-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 11px;
-    margin: 10px 0;
-  }
-
-  .route-btn:hover {
-    transform: scale(1.1);
-  }
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat 4 kolom sejajar */
+    gap: 22px;
 }
 
-@media (max-width: 480px) {
-  .tourism-hero {
-    height: 70vh;
-  }
+.popular-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
 
-  .navbar-bg {
-    width: 92%;
-    max-width: 280px;
-    top: 8px;
-    padding: 6px 10px;
-  }
+.popular-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-  .navbar-brand img {
-    width: 35px;
-  }
-
-  .navbar-bg .nav-link {
-    font-size: 9px;
-    padding: 0.2rem 0.2rem;
-  }
-
-  .airport-title {
-    right: 3%;
-    top: 22%;
-    font-size: 22px;
-    max-width: 220px;
-    line-height: 1.1;
-  }
-
-  .airport-desc {
-    right: 3%;
-    top: 40%;
-    width: 200px;
-    font-size: 10px;
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 10px;
-    border-radius: 10px;
-  }
-
-  .route-wrapper {
-    left: 15px;
-    top: 25%;
-  }
-
-  .route-line {
-    height: 180px;
-  }
-
-  .route-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 9px;
-    margin: 7px 0;
-  }
-
-  .route-btn:hover {
-    transform: scale(1.08);
-  }
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    text-align: left;
 }
+
+.card-info h4 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: top;
+}
+
+.card-info p {
+    font-size: 11px;
+    margin: 0;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.map-section {
+    padding: 60px 0;
+    /* Gunakan flexbox untuk memusatkan konten secara horizontal */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: transparent;
+    width: 100%; /* Pastikan section mengambil lebar penuh */
+}
+
+/* center the inner container as well in case bootstrap adds its own spacing */
+.map-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tourism-map-img {
+    width: 105%;
+    height: auto;
+    border-radius: 20px; /* Saya ubah ke 20px agar lebih halus sesuai gambar */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    /* Tambahkan display block agar margin auto bekerja jika tidak pakai flex */
+    display: block; 
+    margin: 0 auto; 
+    margin-right: 10px; /* Tambahkan margin kanan untuk memberikan ruang */
+    margin-bottom: 100px;
+}
+
+/* gallery for two photos below the map section */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.photo-gallery img {
+    max-width: 48%;
+    height: auto;
+    border-radius: 12px;
+}
+
